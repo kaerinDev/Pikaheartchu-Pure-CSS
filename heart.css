@@ -1,0 +1,249 @@
+body {
+  background-color: #fc5858;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+body .container {
+  -webkit-animation: rotate 10s ease-in infinite alternate;
+          animation: rotate 10s ease-in infinite alternate;
+  background-color: #fc5858;
+  border-radius: 50%;
+}
+
+body .container .heart {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  margin: 0 50px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+body .container .heart .sqr {
+  width: 200px;
+  height: 200px;
+  background-color: #fcd458;
+  position: absolute;
+  border-radius: 6px;
+}
+
+body .container .heart .sqr .circle1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fcd458;
+  position: absolute;
+  top: 100px;
+}
+
+body .container .heart .sqr .circle2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fcd458;
+  position: absolute;
+  left: 100px;
+}
+
+body .container .heart .wrapper-box {
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  width: 300px;
+  height: 300px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+body .container .heart .wrapper-box .eye {
+  width: 4rem;
+  height: 4rem;
+  background: black;
+  position: absolute;
+  border-radius: 4rem;
+  top: 30%;
+  left: 13%;
+}
+
+body .container .heart .wrapper-box .eye.-r {
+  left: 65%;
+}
+
+body .container .heart .wrapper-box .eye .glow {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  position: absolute;
+  left: 44%;
+  top: 13%;
+  -webkit-animation: eyes 5s ease infinite;
+          animation: eyes 5s ease infinite;
+}
+
+body .container .heart .wrapper-box .nose {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 10px solid black;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-radius: 8px;
+  margin: auto;
+  top: 60%;
+}
+
+body .container .heart .wrapper-box .left-cheek,
+body .container .heart .wrapper-box .right-cheek {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #fc6e6e;
+  border-radius: 50%;
+  top: 55%;
+}
+
+body .container .heart .wrapper-box .left-cheek {
+  left: 10%;
+}
+
+body .container .heart .wrapper-box .right-cheek {
+  right: 10%;
+}
+
+body .container .heart .wrapper-box .lips {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 1px;
+  height: 1px;
+  top: 60%;
+  z-index: 2;
+}
+
+body .container .heart .wrapper-box .lips::after, body .container .heart .wrapper-box .lips::before {
+  position: absolute;
+  content: "";
+  top: -20px;
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0px -4px 0 black;
+          box-shadow: inset 0px -4px 0 black;
+  background-color: #fcd458;
+}
+
+body .container .heart .wrapper-box .lips::before {
+  right: 0px;
+}
+
+body .container .heart .wrapper-box .lips::after {
+  left: 0px;
+}
+
+body .container .heart .wrapper-box .mouth {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  top: 60%;
+  border: 2px solid black;
+  border-radius: 0 0 50% 50%;
+  z-index: 1;
+  background-image: radial-gradient(circle at center 80%, #fc5858 0%, #fc5858 50%, #d43e4d 50%, #d43e4d 60%, #5c0009 65%);
+  background-position: 80% center;
+}
+
+body footer {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 50px;
+  color: #fcd458;
+}
+
+body footer p:first-child, body footer #authoress strong {
+  font-family: 'Itim', cursive;
+}
+
+body footer p:last-child {
+  font-family: 'Great Vibes', cursive;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  25% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  25% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  50% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+}
+
+@-webkit-keyframes eyes {
+  0% {
+    left: 44%;
+  }
+  50% {
+    left: 15%;
+  }
+  100% {
+    left: 44%;
+  }
+}
+
+@keyframes eyes {
+  0% {
+    left: 44%;
+  }
+  50% {
+    left: 15%;
+  }
+  100% {
+    left: 44%;
+  }
+}
+/*# sourceMappingURL=heart.css.map */
